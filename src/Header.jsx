@@ -1,4 +1,4 @@
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "./logo.svg";
 import { FaBehance, FaFacebook, FaLinkedin, FaTwitter, FaBars } from 'react-icons/fa';
@@ -50,23 +50,25 @@ const Header = (props) => {
 
     return (
         <header className={ClassNames.join(" ").trim()}>
-            <div>
+            <div className="Container">
                 <h1 className="Heading">
                     <img alt="Codding Addict " src={Logo} title="Coding Addict" />
-                    {width <= 812 && <button onClick={ToggleHeader}><FaBars /></button>}
+                    {width <= 850 && <button onClick={ToggleHeader}><FaBars /></button>}
                 </h1>
                 <nav>
-                    {Links.map((element, index) => {
-                        return (
-                            <Link to={`${element}`} key={index} > {element} </Link>
-                        )
-                    })}
+                    <ul>
+                        {Links.map((element, index) => {
+                            return (
+                                <li key={index} ><Link to={`${element}`}> {element} </Link></li>
+                            )
+                        })}
+                    </ul>
                 </nav>
-                <ul>
+                <ul className="SocialLinks">
                     {socialLinks.map((element, index) => {
                         return (
                             <li key={index + 10}>
-                                <a href={element.href} target="_blank" rel="noreferrer" >{element.icon}</a>
+                                <a href={element.href} target="_blank" rel="noreferrer">{element.icon}</a>
                             </li>
                         )
                     })}

@@ -10,11 +10,11 @@ const App = () => {
           <Header />
           <main>
             <Route path="/" />
-            <Route path="/aboutUs"/>
-            <Route path="/projects"/>
-            <Route path="/contactUs"/>
-            <Route path="/aboutUs"/>
-            <Route path="/profile"/>
+            <Route path="/aboutUs" />
+            <Route path="/projects" />
+            <Route path="/contactUs" />
+            <Route path="/aboutUs" />
+            <Route path="/profile" />
           </main>
         </Switch>
       </Router>

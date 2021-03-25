@@ -5,26 +5,24 @@
   overflow: hidden;
   transition: all 0.3s;
 }
-.Header div {
+.Header .Container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  /* background-color : red;  */
   width: 80%;
   margin: auto;
 }
+
 .Heading {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0px;
+  padding: 0px 10px;
 }
 
 .Heading button {
-  background-color: transparent;
-  border: none;
-  outline: none;
+  all: unset;
   cursor: pointer;
   color: #49a6e9;
   font-size: 1em;
@@ -32,48 +30,48 @@
 
 .Header nav {
   flex: 3;
-  text-align: center;
 }
-.Header nav a {
+
+.Header ul {
+  list-style: none;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Header nav ul li a {
   text-decoration: none;
   color: #324d67;
-  padding: 0px 5px;
   font-size: 1em;
   text-transform: capitalize;
   letter-spacing: 0.1rem;
 }
 
-.Header ul {
-  display: flex;
+.Header .SocialLinks {
   flex: 1;
-  padding: 0px;
-  justify-content: space-around;
-  list-style: none;
+  margin: 0px;
 }
-.Header ul li a {
+
+.Header .SocialLinks li a {
   color: #49a6e9;
 }
 
 @media only screen and (max-width: 1089px) {
-  .Header div {
+  .Header .Container {
     width: 100%;
   }
 }
-@media only screen and (max-width: 814px) {
-  .Header div,
-  nav a {
+@media only screen and (max-width: 850px) {
+  .Header .Container,
+  .Header nav,
+  .Header ul:first-child {
     display: block;
-    text-align: left;
-    padding: 10px;
   }
-  nav a {
-    margin-top: 20px;
-  }
-  .Heading img{
-      width : 200px ;
+  .Header ul li {
+    padding: 10px 0px;
   }
   .Open {
-    height: 300px;
+    height: 320px;
   }
   .Close {
     height: 55px;
