@@ -1,0 +1,81 @@
+.Header {
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.Header div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color : red;  */
+  width: 80%;
+  margin: auto;
+}
+.Heading {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px;
+}
+
+.Heading button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #49a6e9;
+  font-size: 1em;
+}
+
+.Header nav {
+  flex: 3;
+  text-align: center;
+}
+.Header nav a {
+  text-decoration: none;
+  color: #324d67;
+  padding: 0px 5px;
+  font-size: 1em;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+}
+
+.Header ul {
+  display: flex;
+  flex: 1;
+  padding: 0px;
+  justify-content: space-around;
+  list-style: none;
+}
+.Header ul li a {
+  color: #49a6e9;
+}
+
+@media only screen and (max-width: 1089px) {
+  .Header div {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 814px) {
+  .Header div,
+  nav a {
+    display: block;
+    text-align: left;
+    padding: 10px;
+  }
+  nav a {
+    margin-top: 20px;
+  }
+  .Heading img{
+      width : 200px ;
+  }
+  .Open {
+    height: 300px;
+  }
+  .Close {
+    height: 55px;
+  }
+}
