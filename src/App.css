@@ -26,6 +26,7 @@
   cursor: pointer;
   color: #49a6e9;
   font-size: 1em;
+  display : none ;
 }
 
 .Header nav {
@@ -66,6 +67,9 @@
   .Header nav,
   .Header ul:first-child {
     display: block;
+  }
+  .Heading button {
+    display : flex ;
   }
   .Header ul li {
     padding: 10px 0px;

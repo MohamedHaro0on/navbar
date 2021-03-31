@@ -15,18 +15,6 @@ const socialLinks = [
 const Header = (props) => {
 
     const [displayFullHeader, setfullHeader] = useState(false);
-    const [width, setWidth] = useState(window.innerWidth);
-
-
-    // To get the current width of the window ;
-    useEffect(() => {
-        const handleWindowWidth = () => {
-            setWidth(window.innerWidth);
-        }
-        window.addEventListener("resize", handleWindowWidth)
-        return () => window.removeEventListener("resize", handleWindowWidth);
-    })
-
 
     // To Close the Header after Routing
     useEffect(() => {
@@ -52,14 +40,14 @@ const Header = (props) => {
         <header className={ClassNames.join(" ").trim()}>
             <div className="Container">
                 <h1 className="Heading">
-                    <img alt="Codding Addict " src={Logo} title="Coding Addict" />
-                    {width <= 850 && <button onClick={ToggleHeader}><FaBars /></button>}
+                    <img alt="Codding Addict " src={Logo} title="Coding Addict" width ="250" />
+                    {<button onClick={ToggleHeader} aria-label ="Toggle Header"><FaBars /></button>}
                 </h1>
                 <nav>
                     <ul>
                         {Links.map((element, index) => {
                             return (
-                                <li key={index} ><Link to={`${element}`}> {element} </Link></li>
+                                <li key={index} ><Link to={`${element}`} aria-label ={`to ${element}`}> {element} </Link></li>
                             )
                         })}
                     </ul>
@@ -68,7 +56,7 @@ const Header = (props) => {
                     {socialLinks.map((element, index) => {
                         return (
                             <li key={index + 10}>
-                                <a href={element.href} target="_blank" rel="noreferrer">{element.icon}</a>
+                                <a href={element.href} target="_blank" rel="noreferrer" aria-label ={`to ${element.href}`}>{element.icon}</a>
                             </li>
                         )
                     })}
